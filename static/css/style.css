@@ -68,7 +68,7 @@ nav ul {
   justify-content: center;
 }
 nav ul li {
-  margin: 0 20px;
+  padding: 0 20px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 500;
@@ -573,8 +573,64 @@ a span::before {
     font-size: 40px;
   }
 }
+@media (max-width: 500px) {
+  .item_wrap .ex {
+    font-size: 14px;
+  }
+  .item_wrap .ex span {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  /* .item_wrap .ex button {
+    padding: 7px 18px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #f19b3e;
+    margin-top: 15px;
+  } */
+}
 @media (max-width: 450px) {
   nav ul li {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 387px) {
+  .item_wrap .ex {
+    font-size: 10px;
+  }
+  .item_wrap .ex span {
+    font-size: 10px;
+    margin-bottom: 1px;
+  }
+  .item_wrap .ex button {
+    padding: 4px 10px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .profile {
+    width: 80%;
+    height: 0%;
+  }
+  .item_wrap .ex {
+    line-height: 13px;
+  }
+  .item_wrap .ex button {
+    padding: 1px 8px;
+    margin-top: 8px;
+    font-size: 10px;
+  }
+  .slick-arrow {
+    width: 20px;
+    height: 20px;
+  }
+  .slick-next {
+    top: 39%;
+  }
+  .slick-prev {
+    top: 39%;
   }
 }

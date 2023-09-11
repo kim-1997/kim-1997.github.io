@@ -64,7 +64,7 @@ window.addEventListener("scroll", function () {
     header.style.backdropFilter = "none";
     headerWrap.style.color = "#ccc";
     li.forEach((li) => {
-      li.style.padding = "0px";
+      li.style.padding = "0px 20px";
       li.style.background = "none";
       li.style.borderRadius = "0px";
       li.style.color = "#ccc";
@@ -225,7 +225,11 @@ function checkScreenWidth() {
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
-
+  if (screenWidth <= 350) {
+    li.forEach((li) => {
+      li.style.padding = "0px 5px";
+    });
+  }
   // 화면 너비가 570px 이하인 경우
   if (screenWidth <= 570) {
     li.forEach((li) => {
@@ -233,15 +237,16 @@ function checkScreenWidth() {
       // li.style.borderRadius = "20px";
       li.style.fontSize = "13px";
       if (window.scrollY > 0) {
-        li.style.margin = "0px";
+        li.style.padding = "0px 5px";
+        li.style.margin = "0px 5px";
       } else {
-        li.style.margin = "0 20px";
+        li.style.margin = "0 5px";
       }
     });
   } else {
     li.forEach((li) => {
       li.style.fontSize = "20px";
-      li.style.margin = "0 20px";
+      // li.style.margin = "0 20px";
     });
   }
 }
